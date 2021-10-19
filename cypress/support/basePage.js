@@ -7,6 +7,9 @@ class BasePage {
     shouldBeOpened(assertion, value) {
         cy.url().should(assertion, value);
     }
+    typeUserName(username) {
+        this.elements.userNameInput().type(username);
+    }
 }
 
 export default BasePage;

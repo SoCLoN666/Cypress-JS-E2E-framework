@@ -1,4 +1,4 @@
-import GoogleMainPageSearch from '../support/googleTests';
+import GoogleMainPageSearch from '../support/demoTestGooglePage';
 
 describe('test', () => {
     let test;
@@ -7,7 +7,7 @@ describe('test', () => {
         test.visitGoogle();
     });
 
-    it.skip('go to youtube and check the url', () => {
+    it.only('go to youtube and check the url', () => {
         cy.visit('https://www.google.com/').url().should('eq', 'https://www.google.com/');
     });
     it.only('test 2', () => {

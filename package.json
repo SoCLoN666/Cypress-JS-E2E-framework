@@ -3,6 +3,7 @@
         "cy:open": "npx cypress open"
     },
     "devDependencies": {
-        "cypress": "^8.6.0"
+        "cypress": "^8.6.0",
+        "cypress-xpath": "^1.6.2"
     }
 }
