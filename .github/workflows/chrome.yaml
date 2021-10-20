@@ -8,8 +8,9 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v1
-            - name: Chrome
+            - name: Cypress install
               uses: cypress-io/github-action@v2
+            - name: Test Run
               timeout-minutes: 10
               with:
                   start: npm start

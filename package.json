@@ -4,6 +4,8 @@
     },
     "devDependencies": {
         "cypress": "^8.6.0",
-        "cypress-xpath": "^1.6.2"
+        "cypress-xpath": "^1.6.2",
+        "eslint": "^8.0.1",
+        "eslint-config-google": "^0.14.0"
     }
 }
