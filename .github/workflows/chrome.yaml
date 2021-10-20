@@ -4,7 +4,7 @@ on: push
 
 jobs:
     chrome:
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v1
@@ -12,6 +12,5 @@ jobs:
               uses: cypress-io/github-action@v2
               timeout-minutes: 10
               with:
-                  build: npm rum build
                   start: npm start
                   browser: chrome
