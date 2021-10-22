@@ -1,28 +1,16 @@
-import BasePage from './basePage';
 import LoginSwagLabsLocators from '../elements/locators/swab-labs-locators';
 
 class LoginPage extends LoginSwagLabsLocators {
     page = new LoginSwagLabsLocators();
-    // visitSwagLabs() {
-    //     this.page.visit('https://www.saucedemo.com/');
-    // }
-
-    // functio() {
-    //     this.page.visit('https://www.saucedemo.com/');
-    // }
-
-    // checkUrlOfSwagLabs() {
-    //     this.page.shouldBeOpened('eq', 'https://www.saucedemo.com/');
-    // }
 
     typeUserName(usernames) {
-        this.page.elements.userNameInput().type(usernames);
+        this.page.loginElements.userNameInput().type(usernames);
     }
     typePassword(password) {
-        this.page.elements.passwordInput().type(password);
+        this.page.loginElements.passwordInput().type(password);
     }
     clickLogin() {
-        this.page.elements.loginButtom().click();
+        this.page.loginElements.loginButtom().click();
     }
 }
 
