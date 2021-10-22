@@ -2,6 +2,10 @@ name: Chrome
 
 on: push
 
+ignore:
+    - '../cypress/integration/1-getting-started'
+    - '../cypress/integration/2-advanced-examples'
+
 jobs:
     chrome:
         runs-on: ubuntu-latest
