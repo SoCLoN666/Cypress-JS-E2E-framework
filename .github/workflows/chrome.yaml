@@ -11,6 +11,7 @@ jobs:
             - name: Cypress install
               uses: cypress-io/github-action@v2
               timeout-minutes: 10
+            -name: Test
               with:
-                  start: npm start
+                  start: npm test ./cypress/integration/swag-labs-login.js
                   browser: chrome
