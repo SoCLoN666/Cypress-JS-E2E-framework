@@ -19,5 +19,5 @@ jobs:
               timeout-minutes: 10
               with:
                   spec: cypress/integration/tests/swag-labs-login.js
-                  start: npm run test:swag
+                  start: npm test
                   browser: chrome
