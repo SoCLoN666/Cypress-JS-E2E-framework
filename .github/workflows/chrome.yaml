@@ -1,10 +1,10 @@
 name: Chrome
 
-on: push
-
-ignore:
-    - '../cypress/integration/1-getting-started'
-    - '../cypress/integration/2-advanced-examples'
+on:
+    push:
+        path-ignore:
+            - '../cypress/integration/1-getting-started'
+            - '../cypress/integration/2-advanced-examples'
 
 jobs:
     chrome:
