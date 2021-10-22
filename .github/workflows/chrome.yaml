@@ -3,8 +3,8 @@ name: Chrome
 on:
     push:
         path-ignore:
-            - '../cypress/integration/1-getting-started'
-            - '../cypress/integration/2-advanced-examples'
+            - '**/1-getting-started.js'
+            - '.**/2-advanced-examples.js'
 
 jobs:
     chrome:
