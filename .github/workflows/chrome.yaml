@@ -12,6 +12,5 @@ jobs:
               uses: cypress-io/github-action@v2
               timeout-minutes: 10
             - name: Test
-              with:
-                  run: npm test
-                  browser: chrome
+              run: npm test
+              browser: chrome
