@@ -1,9 +1,7 @@
-import LoginPage from '../support/loginPage';
-require('cypress-xpath');
+import LoginPage from '../../support/loginPage';
 
-let test;
 beforeEach(() => {
-    test = new LoginPage();
+    const test = new LoginPage();
     test.visit('https://www.saucedemo.com/');
 });
 describe('When visiting SwagLab login page', () => {

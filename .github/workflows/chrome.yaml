@@ -1,4 +1,4 @@
-name: Chrome
+name: E2E tests
 
 on:
     push:
@@ -11,10 +11,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v1
+              uses: actions/checkout@v2
             - name: Cypress install
               uses: cypress-io/github-action@v2
               timeout-minutes: 10
               with:
+                  spec: cypress/integration/tests/*
                   start: npm run test
                   browser: chrome
