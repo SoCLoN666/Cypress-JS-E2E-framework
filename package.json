@@ -1,7 +1,7 @@
 {
     "scripts": {
         "cy:open": "npx cypress open",
-        "test:swag": "node cypress/integration/tests/swag-labs-login.js"
+        "test:swag": "cypress run cypress/integration/tests/swag-labs-login.js"
     },
     "devDependencies": {
         "cypress": "^8.6.0",
