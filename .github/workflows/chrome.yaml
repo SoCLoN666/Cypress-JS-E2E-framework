@@ -13,4 +13,5 @@ jobs:
               timeout-minutes: 10
             - name: Test
               run: npm test
-              browser: chrome
+              with:
+                  browser: chrome
