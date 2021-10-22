@@ -1,6 +1,6 @@
 name: E2E tests
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
     chrome:
@@ -18,5 +18,5 @@ jobs:
               uses: cypress-io/github-action@v2
               timeout-minutes: 10
               with:
-                  start: cypress run cypress/integration/tests/swag-labs-login.js
+                  start: npm run cypress run cypress/integration/tests/swag-labs-login.js
                   browser: chrome
