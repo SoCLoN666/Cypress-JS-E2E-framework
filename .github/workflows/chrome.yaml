@@ -17,5 +17,5 @@ jobs:
               timeout-minutes: 10
               with:
                   spec: cypress/integration/tests/*
-                  start: npm run test
+                  start: npm test
                   browser: chrome
