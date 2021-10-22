@@ -3,8 +3,8 @@ name: Chrome
 on:
     push:
         path-ignore:
-            - '**/1-getting-started.js'
-            - '.**/2-advanced-examples.js'
+            - '**/js'
+            - '**/js'
 
 jobs:
     chrome:
