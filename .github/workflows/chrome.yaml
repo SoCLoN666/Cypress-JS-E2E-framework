@@ -18,6 +18,5 @@ jobs:
               uses: cypress-io/github-action@v2
               timeout-minutes: 10
               with:
-                  spec: cypress/integration/tests/*
-                  start: npm test
+                  start: npm run test:swag
                   browser: chrome
