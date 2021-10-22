@@ -11,9 +11,9 @@ class BasePage {
         cy.url().should(assertion, value);
     }
 
-    typeUserName(username) {
-        this.elements.userNameInput().type(username);
-    }
+    // typeUserName(username) {
+    //     this.loginElements.userNameInput().type(username);
+    // }
 }
 
 export default BasePage;
