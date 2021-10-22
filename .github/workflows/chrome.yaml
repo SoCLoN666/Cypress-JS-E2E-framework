@@ -16,5 +16,5 @@ jobs:
               uses: cypress-io/github-action@v2
               timeout-minutes: 10
               with:
-                  start: npm test
+                  start: npm test cypress/integration/swag-labs-login.js
                   browser: chrome
