@@ -13,12 +13,11 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: 12
-            run: npx browserslist@latest --update-db
 
             - name: Cypress install
               uses: cypress-io/github-action@v2
               timeout-minutes: 10
               with:
                   spec: cypress/integration/tests/swag-labs-login.js
-                  start: npm test
+                  start: npm cypress run
                   browser: chrome
