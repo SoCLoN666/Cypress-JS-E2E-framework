@@ -1,17 +1,19 @@
-import LoginSwagLabsLocators from '../elements/locators/swab-labs-locators';
+import BasePage from './basePage';
 
-class LoginPage extends LoginSwagLabsLocators {
-    page = new LoginSwagLabsLocators();
+export default class LoginPage extends BasePage {
+    loginElements = {
+        userNameInput: () => cy.get('#user-name'),
+        passwordInput: () => cy.get('#password'),
+        loginButtom: () => cy.get('#login-button'),
+    };
 
-    typeUserName(usernames) {
-        this.page.loginElements.userNameInput().type(usernames);
-    }
-    typePassword(password) {
-        this.page.loginElements.passwordInput().type(password);
-    }
+    // typeUserName(usernames) {
+    //     this.loginElements.userNameInput().type(usernames);
+    // }
+    // typePassword(password) {
+    //     this.loginElements.passwordInput().type(password);
+    // }
     clickLogin() {
-        this.page.loginElements.loginButtom().click();
+        this.loginElements.loginButtom().click();
     }
 }
-
-export default LoginPage;

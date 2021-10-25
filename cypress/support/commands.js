@@ -10,7 +10,18 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+
+import LoginPage from './loginPage';
+const page = new LoginPage();
+
+Cypress.Commands.add('login', (email, password) => {
+    page.visit(Cypress.env('BASE_URL'));
+    page.loginElements.userNameInput().type(email);
+    page.loginElements.passwordInput().type(password);
+    page.loginElements.loginButtom().click();
+});
+
+// Cypress.Commands.add('login', ('standard_user', 'secret_sauce') => {})
 //
 //
 // -- This is a child command --

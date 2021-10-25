@@ -2,18 +2,17 @@
  * This is a BasePage that contains and restricts the number
  * of methods that could be used in tests.
  */
-class BasePage {
-    visit(url) {
-        cy.visit(url);
+export default class BasePage {
+    constructor(page) {
+        this.page = page;
+    }
+    visit(url, endpoint = '') {
+        cy.visit(url + endpoint);
+        return this;
     }
 
-    shouldBeOpened(assertion, value) {
-        cy.url().should(assertion, value);
+    shouldBeOpened(value) {
+        cy.url().should('contains', value);
+        return this;
     }
-
-    // typeUserName(username) {
-    //     this.loginElements.userNameInput().type(username);
-    // }
 }
-
-export default BasePage;
