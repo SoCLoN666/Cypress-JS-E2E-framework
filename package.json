@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "cy:open": "npx cypress open"
+        "cy:open": "npx cypress open",
+        "test-e2e": "npx cypress run --spec 'cypress/integration/my-spec.js'"
     },
     "devDependencies": {
         "cypress": "^8.6.0",
