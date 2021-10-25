@@ -6,7 +6,7 @@ describe('When visiting SwagLab login page', () => {
         cy.login(Cypress.env('LOGIN'), Cypress.env('PASSWORD'));
     });
     it('should see the correct SwagLab URL', () => {
-        page.shouldBeOpened(Cypress.env('INVENTORY_ENDPOINT'));
+        page.shouldBeOpened(Cypress.env('BASE_URL'));
     });
 
     it('and login functionality with valid login & password', () => {
