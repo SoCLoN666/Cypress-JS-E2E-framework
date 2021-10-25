@@ -12,7 +12,7 @@ export default class BasePage {
     }
 
     shouldBeOpened(value) {
-        cy.url().should('contains', value);
+        cy.url().should('eq', value);
         return this;
     }
 }
