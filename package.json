@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "cy:open": "npx cypress open",
+        "test-e2e": "npx cypress run --spec 'cypress/integration/my-spec.js'",
+        "test": "echo \"No test specified\""
+    },
+    "devDependencies": {
+        "cypress": "^8.6.0",
+        "cypress-xpath": "^1.6.2",
+        "eslint": "^8.0.1",
+        "eslint-config-google": "^0.14.0"
+    }
+}
