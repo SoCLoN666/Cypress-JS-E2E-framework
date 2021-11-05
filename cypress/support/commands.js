@@ -12,13 +12,17 @@
 // -- This is a parent command --
 
 import LoginPage from './loginPage';
-const page = new LoginPage();
+import PageFactory from './pageFactory';
+
+const page = new PageFactory();
+// const loginPage = page.basePage();
+const homePage = page.loginPage();
 
 Cypress.Commands.add('login', (email, password) => {
-    page.visit(Cypress.env('BASE_URL'));
-    page.loginElements.userNameInput().type(email);
-    page.loginElements.passwordInput().type(password);
-    page.loginElements.loginButtom().click();
+    homePage.visit();
+    homePage.loginElements.userNameInput().type(email);
+    homePage.loginElements.passwordInput().type(password);
+    homePage.loginElements.loginButtom().click();
 });
 
 // Cypress.Commands.add('login', ('standard_user', 'secret_sauce') => {})

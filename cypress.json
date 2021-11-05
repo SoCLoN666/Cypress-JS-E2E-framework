@@ -1,5 +1,6 @@
 {
     "chromeWebSecurity": false,
+    "baseUrl": "https://www.saucedemo.com/",
     "env": {
         "BASE_URL": "https://www.saucedemo.com/",
         "INVENTORY_ENDPOINT": "inventory.html",

@@ -6,13 +6,13 @@ export default class BasePage {
     constructor(page) {
         this.page = page;
     }
-    visit(url, endpoint = '') {
-        cy.visit(url + endpoint);
+    visit(endpoint = '') {
+        cy.visit(endpoint);
         return this;
     }
 
     shouldBeOpened(value) {
-        cy.url().should('eq', value);
+        cy.url().should('contains', value);
         return this;
     }
 }
